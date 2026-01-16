@@ -11,15 +11,16 @@
             "module": "streamlit",
             "args": [
                 "run",
-                "${workspaceFolder}/src/app.py",
-                "--logger.level=debug"
+                "${workspaceFolder}/src/app.py"
             ],
             "python": "${workspaceFolder}/.venv/Scripts/python.exe",
             "jinja": true,
             "justMyCode": true,
             "console": "integratedTerminal",
             "env": {
-                "VIRTUAL_ENV": "${workspaceFolder}/.venv"
+                "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+                "PATH": "${workspaceFolder}/.venv/Scripts;${env:PATH}",
+                "DEBUG": "false"
             }
         }
     ]

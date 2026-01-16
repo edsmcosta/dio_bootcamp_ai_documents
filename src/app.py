@@ -5,8 +5,11 @@ from services.blob_service import upload_file_to_blob
 from services.document_service import analyze_credit_card_image
 from utils.Config import DEBUG
 
-# Configure logging
+# Configure logging based on DEBUG flag
+log_level = logging.DEBUG if DEBUG else logging.INFO
+logging.basicConfig(level=log_level)
 logger = logging.getLogger(__name__)
+logger.setLevel(log_level)
 
 # Streamlit page configuration
 st.set_page_config(
