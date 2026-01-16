@@ -14,9 +14,13 @@
                 "${workspaceFolder}/src/app.py",
                 "--logger.level=debug"
             ],
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
             "jinja": true,
             "justMyCode": true,
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "env": {
+                "VIRTUAL_ENV": "${workspaceFolder}/.venv"
+            }
         }
     ]
 }
