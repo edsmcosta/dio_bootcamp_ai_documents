@@ -111,7 +111,7 @@ def show_image_and_validation(blob_url: str, credit_card_info: Dict[str, Any]) -
         
         with col1:
             st.subheader("📸 Imagem do Cartão")
-            st.image(blob_url, caption="Cartão de crédito enviado", use_column_width=True)
+            st.image(blob_url, caption="Cartão de crédito enviado", width='content')
         
         with col2:
             st.subheader("✅ Validação das Informações")
